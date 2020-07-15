@@ -20,7 +20,7 @@ FROM
 		FROM 
 			KAKAOBANK.MENU_LOG 
 		WHERE 
-			MENU_NM NOT IN ('LOGIN','LOGOUT')
+			MENU_NM NOT IN ('login','logout')
 		)B
 	) MAIN 
 LEFT JOIN 
@@ -33,20 +33,20 @@ LEFT JOIN
 		KAKAOBANK.MENU_LOG ML 
 	WHERE
 		1=1
-		AND ML.MENU_NM NOT IN('LOGIN','LOGOUT')
+		AND ML.MENU_NM NOT IN('login','logout')
 	GROUP BY 
 		DAY
 		,MENU_NM
 	) SUB ON MAIN.MENU_NM = SUB.MENU_NM AND MAIN.DAY = SUB.DAY
 ORDER BY 
      CASE
-          WHEN MAIN.DAY = 'MONDAY' THEN 1
-          WHEN MAIN.DAY = 'TUESDAY' THEN 2
-          WHEN MAIN.DAY = 'WEDNESDAY' THEN 3
-          WHEN MAIN.DAY = 'THURSDAY' THEN 4
-          WHEN MAIN.DAY = 'FRIDAY' THEN 5
-          WHEN MAIN.DAY = 'SATURDAY' THEN 6
-          WHEN MAIN.DAY = 'SUNDAY' THEN 7
+          WHEN MAIN.DAY = 'Monday' THEN 1
+          WHEN MAIN.DAY = 'Tuesday' THEN 2
+          WHEN MAIN.DAY = 'Wednesday' THEN 3
+          WHEN MAIN.DAY = 'Thursday' THEN 4
+          WHEN MAIN.DAY = 'Friday' THEN 5
+          WHEN MAIN.DAY = 'Saturday' THEN 6
+          WHEN MAIN.DAY = 'Sunday' THEN 7
      END ASC
      ,CNT DESC
      ,MAIN.MENU_NM ASC
