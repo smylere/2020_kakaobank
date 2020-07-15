@@ -11,7 +11,7 @@ WITH TMP AS
 		FROM 
 			(
 			SELECT 
-				REPLACE(LOG_ID,'ID','') *1 AS ORD_NO
+				REPLACE(LOG_ID,'id','') *1 AS ORD_NO
 				,USR_NO 
 				,MENU_NM
 			FROM 
@@ -20,7 +20,7 @@ WITH TMP AS
 		LEFT JOIN
 			(
 			SELECT 
-				REPLACE(LOG_ID,'ID','') +1 AS ORD_NO
+				REPLACE(LOG_ID,'id','') +1 AS ORD_NO
 				,USR_NO 
 				,MENU_NM
 			FROM 
@@ -42,7 +42,7 @@ SELECT
 FROM 
 	(
 	SELECT 
-		REPLACE(LOG_ID,'ID','') *1 AS ORD_NO
+		REPLACE(LOG_ID,'id','') *1 AS ORD_NO
 		,USR_NO 
 		,MENU_NM
 	FROM 
@@ -51,7 +51,7 @@ FROM
 LEFT JOIN
 	(
 	SELECT 
-		REPLACE(LOG_ID,'ID','') +1 AS ORD_NO
+		REPLACE(LOG_ID,'id','') +1 AS ORD_NO
 		,USR_NO 
 		,MENU_NM
 	FROM 
