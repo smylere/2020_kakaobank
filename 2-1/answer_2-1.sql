@@ -1,55 +1,55 @@
--- explain
-select distinct
-	main.day
-	,main.menu_nm
-	,case 
-		when sub.cnt is not null then sub.cnt 
-		when sub.cnt is null then '-'
-		end as cnt
-from 
+-- EXPLAIN
+SELECT DISTINCT
+	MAIN.DAY
+	,MAIN.MENU_NM
+	,CASE 
+		WHEN SUB.CNT IS NOT NULL THEN SUB.CNT 
+		WHEN SUB.CNT IS NULL THEN '-'
+		END AS CNT
+FROM 
 	(
-	select distinct 
-		dayname(cast(LOG_TKTM as date)) as day
-		,b.menu_nm
-	from 
-		KAKAOBANK.MENU_LOG a 
-	cross join 
+	SELECT DISTINCT 
+		DAYNAME(CAST(LOG_TKTM AS DATE)) AS DAY
+		,B.MENU_NM
+	FROM 
+		KAKAOBANK.MENU_LOG A 
+	CROSS JOIN 
 		(
-		select distinct
-			menu_nm 
-		from 
+		SELECT DISTINCT
+			MENU_NM 
+		FROM 
 			KAKAOBANK.MENU_LOG 
-		where 
-			menu_nm not in ('login','logout')
-		)b
-	) main 
-left join 
+		WHERE 
+			MENU_NM NOT IN ('LOGIN','LOGOUT')
+		)B
+	) MAIN 
+LEFT JOIN 
 	(
-	select 
-		dayname(cast(LOG_TKTM as date)) as day
-		,menu_nm
-		,count(menu_nm) as cnt 
-	from 
-		KAKAOBANK.MENU_LOG ml 
-	where
+	SELECT 
+		DAYNAME(CAST(LOG_TKTM AS DATE)) AS DAY
+		,MENU_NM
+		,COUNT(MENU_NM) AS CNT 
+	FROM 
+		KAKAOBANK.MENU_LOG ML 
+	WHERE
 		1=1
-		and ml.MENU_NM not in('login','logout')
-	group by 
-		day
-		,menu_nm
-	) sub on main.menu_nm = sub.menu_nm and main.day = sub.day
-order by 
+		AND ML.MENU_NM NOT IN('LOGIN','LOGOUT')
+	GROUP BY 
+		DAY
+		,MENU_NM
+	) SUB ON MAIN.MENU_NM = SUB.MENU_NM AND MAIN.DAY = SUB.DAY
+ORDER BY 
      CASE
-          WHEN main.day = 'Monday' THEN 1
-          WHEN main.day = 'Tuesday' THEN 2
-          WHEN main.day = 'Wednesday' THEN 3
-          WHEN main.day = 'Thursday' THEN 4
-          WHEN main.day = 'Friday' THEN 5
-          WHEN main.day = 'Saturday' THEN 6
-          WHEN main.day = 'Sunday' THEN 7
+          WHEN MAIN.DAY = 'MONDAY' THEN 1
+          WHEN MAIN.DAY = 'TUESDAY' THEN 2
+          WHEN MAIN.DAY = 'WEDNESDAY' THEN 3
+          WHEN MAIN.DAY = 'THURSDAY' THEN 4
+          WHEN MAIN.DAY = 'FRIDAY' THEN 5
+          WHEN MAIN.DAY = 'SATURDAY' THEN 6
+          WHEN MAIN.DAY = 'SUNDAY' THEN 7
      END ASC
-     ,cnt desc
-     ,main.menu_nm asc
+     ,CNT DESC
+     ,MAIN.MENU_NM ASC
 ;	
 
 
