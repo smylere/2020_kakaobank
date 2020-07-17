@@ -1,0 +1,15 @@
+id|select_type|table           |partitions|type|possible_keys|key        |key_len|ref                        |rows|filtered|Extra                                       |
+--|-----------|----------------|----------|----|-------------|-----------|-------|---------------------------|----|--------|--------------------------------------------|
+ 1|PRIMARY    |BASE            |          |ALL |             |           |       |                           |  40|    90.0|Using where; Using temporary; Using filesort|
+ 1|PRIMARY    |<derived3>      |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|   3|   100.0|                                            |
+ 1|PRIMARY    |<derived5>      |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|   4|   100.0|                                            |
+ 1|PRIMARY    |<derived7>      |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|   3|   100.0|                                            |
+ 1|PRIMARY    |<derived9>      |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|   3|   100.0|                                            |
+ 1|PRIMARY    |<derived11>     |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|  10|   100.0|                                            |
+ 1|PRIMARY    |<derived13>     |          |ref |<auto_key0>  |<auto_key0>|51     |KAKAOBANK.BASE.USR_NO,const|  10|   100.0|                                            |
+13|DERIVED    |MENU_LOG        |          |ALL |             |           |       |                           | 649|    80.0|Using where; Using filesort                 |
+11|DERIVED    |MENU_LOG        |          |ALL |             |           |       |                           | 649|    80.0|Using where; Using temporary; Using filesort|
+ 9|DERIVED    |USR_INFO_CHG_LOG|          |ALL |             |           |       |                           |  40|    90.0|Using where; Using filesort                 |
+ 7|DERIVED    |USR_INFO_CHG_LOG|          |ALL |             |           |       |                           |  40|    90.0|Using where; Using filesort                 |
+ 5|DERIVED    |USR_INFO_CHG_LOG|          |ALL |             |           |       |                           |  40|   100.0|Using filesort                              |
+ 3|DERIVED    |USR_INFO_CHG_LOG|          |ALL |             |           |       |                           |  40|    90.0|Using where; Using filesort                 |
