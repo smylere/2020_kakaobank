@@ -68,6 +68,7 @@ for i in range(len(duplicated)):
             tmpTimeDelta.append(endTime-startTime) # 활동시간 변위
     
     tmpTime.sort()
+    tmpTimeDelta.sort()
 
     tmp.append(tmpTime[-1])
     tmp.append(tmpTime[0])
