@@ -1,4 +1,4 @@
-day      |menu_nm|cnt|
+DAY      |MENU_NM|CNT|
 ---------|-------|---|
 Monday   |가이드    |9  |
 Monday   |세이프박스  |8  |

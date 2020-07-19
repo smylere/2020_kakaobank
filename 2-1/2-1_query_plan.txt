@@ -1,8 +1,7 @@
-id|select_type|table     |partitions|type |possible_keys|key        |key_len|ref                  |rows  |filtered|Extra                                     |
---|-----------|----------|----------|-----|-------------|-----------|-------|---------------------|------|--------|------------------------------------------|
- 1|PRIMARY    |<derived2>|          |ALL  |             |           |       |                     |336831|   100.0|Using temporary; Using filesort           |
- 1|PRIMARY    |<derived4>|          |ref  |<auto_key0>  |<auto_key0>|242    |main.day,main.menu_nm|    10|   100.0|                                          |
- 4|DERIVED    |ml        |          |ALL  |             |           |       |                     |   649|    80.0|Using where; Using temporary              |
- 2|DERIVED    |<derived3>|          |ALL  |             |           |       |                     |   519|   100.0|Using temporary                           |
- 2|DERIVED    |a         |          |index|             |PRIMARY    |140    |                     |   649|   100.0|Using index; Using join buffer (hash join)|
- 3|DERIVED    |MENU_LOG  |          |ALL  |             |           |       |                     |   649|    80.0|Using where; Using temporary              |
+id|select_type|table     |partitions|type |possible_keys|key        |key_len|ref           |rows|filtered|Extra                                     |
+--|-----------|----------|----------|-----|-------------|-----------|-------|--------------|----|--------|------------------------------------------|
+ 1|PRIMARY    |<derived3>|          |ALL  |             |           |       |              | 519|   100.0|Using temporary; Using filesort           |
+ 1|PRIMARY    |A         |          |index|             |PRIMARY    |140    |              | 649|   100.0|Using index; Using join buffer (hash join)|
+ 1|PRIMARY    |<derived4>|          |ref  |<auto_key0>  |<auto_key0>|242    |func,B.MENU_NM|  10|   100.0|Using where                               |
+ 4|DERIVED    |ML        |          |ALL  |             |           |       |              | 649|    80.0|Using where; Using temporary              |
+ 3|DERIVED    |MENU_LOG  |          |ALL  |             |           |       |              | 649|    80.0|Using where; Using temporary              |
