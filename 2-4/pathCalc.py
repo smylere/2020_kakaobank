@@ -15,7 +15,9 @@ sql = "select MENU_NM, LOG_TKTM from KAKAOBANK.MENU_LOG ORDER BY USR_NO,LOG_ID"
 cur.execute(sql)
 
 result = list(cur.fetchall())
-    
+
+
+# login / logout 시간 정보에 대한 table 인덱스 정보 별도 저장    
 idx_login =[]
 idx_logout = []
 login_dtm = []
@@ -30,6 +32,8 @@ for i,elem in enumerate(result):
         idx_logout.append(i)
         logout_dtm.append(result[i][1])
 
+
+# 메뉴방문 경로 집계를 위한 데이터 별도 저장
 pathCalc = []
 pathCalcTime = []
 for i in range(len(idx_login)):
@@ -44,8 +48,10 @@ for i in range(len(idx_login)):
     pathCalc.append(tmp)
     pathCalcTime.append(tmpDuplicated+[login_dtm[i]]+[logout_dtm[i]])
 
+# 메뉴 방문경로에 대해 중복없는 값 전체 추출
 duplicated = list(set(map(tuple,pathCalc)))
 
+# 메뉴 방문에 대한 중복 기준 카운트 집계 및 메뉴 유지시간 계산
 pathResult = []
 for i in range(len(duplicated)):
     
@@ -67,6 +73,7 @@ for i in range(len(duplicated)):
             tmpTime.append(str(endTime-startTime)) # 활동시간 문자열 
             tmpTimeDelta.append(endTime-startTime) # 활동시간 변위
     
+    # 메뉴 방문시간 집계 정렬
     tmpTime.sort()
     tmpTimeDelta.sort()
 
@@ -74,6 +81,7 @@ for i in range(len(duplicated)):
     tmp.append(tmpTime[0])
     tmp.append(tmpTimeDelta[-1])
 
+    # 메뉴 방문 횟수 집계 
     # tmp.append(cntLength)
     tmp.append(cnt)
     
@@ -87,10 +95,6 @@ for i in range(len(pathResult)):
 
 # 경로 빈출 및 최대시간 기준 정렬
 outputIndex = sorted(modePath,key = lambda x : (-x[0],-x[2]))
-
-# print(pathResult[outputIndex[0][1]][:-2])
-# print(pathResult[outputIndex[1][1]][:-2])
-# print(pathResult[outputIndex[2][1]][:-2])
 
 with open('2-4/result.csv','w',newline='',encoding='utf-8') as file:
     writer = csv.writer(file)
