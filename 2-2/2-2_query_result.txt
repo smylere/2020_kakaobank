@@ -1,5 +1,6 @@
 CURRENT_MENU|PRIVIOUS_MENU|CNT|RATE |
 ------------|-------------|---|-----|
+login       |logout       | 82|0.999|
 logout      |가이드          | 16|0.150|
 logout      |내신용정보        |  8|0.075|
 logout      |내정보          | 13|0.121|
