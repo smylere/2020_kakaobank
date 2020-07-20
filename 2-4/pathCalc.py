@@ -104,15 +104,14 @@ def calcPathCost(result):
     
     return pathResult,outputIndex
 
+# csv 출력 
+def writeCSV(data,number):
+    with open('2-4/result.csv','w',newline='',encoding='utf-8') as file:    
+        writer = csv.writer(file)
+        for i in range(number):
+            writer.writerow(data[0][data[1][i][1]][:-2])
     
 if __name__ == "__main__":
     result = dbConnect()
     output = calcPathCost(result)
-
-# csv 출력 
-with open('2-4/result.csv','w',newline='',encoding='utf-8') as file:
-    writer = csv.writer(file)
-    writer.writerow(output[0][output[1][0][1]][:-2])
-    writer.writerow(output[0][output[1][1][1]][:-2])
-    writer.writerow(output[0][output[1][2][1]][:-2])
-    
+    writeCSV(output,3)  # 0,1,2(top3만 출력)
