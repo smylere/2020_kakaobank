@@ -1,72 +1,72 @@
-DAY      |MENU_NM|CNT|
----------|-------|---|
-Monday   |가이드    |9  |
-Monday   |세이프박스  |8  |
-Monday   |내신용정보  |6  |
-Monday   |내카드    |6  |
-Monday   |모임통장   |6  |
-Monday   |추천     |6  |
-Monday   |카드이용내역 |6  |
-Monday   |내정보    |5  |
-Monday   |이체내역   |5  |
-Monday   |정기예금   |5  |
-Tuesday  |이체내역   |22 |
-Tuesday  |추천     |20 |
-Tuesday  |내카드    |19 |
-Tuesday  |세이프박스  |18 |
-Tuesday  |가이드    |17 |
-Tuesday  |내신용정보  |17 |
-Tuesday  |정기예금   |17 |
-Tuesday  |모임통장   |14 |
-Tuesday  |카드이용내역 |13 |
-Tuesday  |내정보    |11 |
-Wednesday|정기예금   |9  |
-Wednesday|내신용정보  |7  |
-Wednesday|이체내역   |7  |
-Wednesday|내정보    |4  |
-Wednesday|내카드    |4  |
-Wednesday|모임통장   |4  |
-Wednesday|카드이용내역 |3  |
-Wednesday|세이프박스  |12 |
-Wednesday|가이드    |10 |
-Wednesday|추천     |10 |
-Thursday |이체내역   |5  |
-Thursday |내카드    |4  |
-Thursday |추천     |4  |
-Thursday |내신용정보  |3  |
-Thursday |세이프박스  |3  |
-Thursday |정기예금   |1  |
-Thursday |카드이용내역 |1  |
-Thursday |가이드    |-  |
-Thursday |내정보    |-  |
-Thursday |모임통장   |-  |
-Friday   |추천     |5  |
-Friday   |내정보    |4  |
-Friday   |이체내역   |4  |
-Friday   |내카드    |3  |
-Friday   |모임통장   |3  |
-Friday   |세이프박스  |3  |
-Friday   |내신용정보  |2  |
-Friday   |가이드    |1  |
-Friday   |정기예금   |1  |
-Friday   |카드이용내역 |1  |
-Saturday |가이드    |7  |
-Saturday |내정보    |7  |
-Saturday |세이프박스  |6  |
-Saturday |이체내역   |5  |
-Saturday |추천     |5  |
-Saturday |카드이용내역 |5  |
-Saturday |내카드    |4  |
-Saturday |내신용정보  |2  |
-Saturday |모임통장   |10 |
-Saturday |정기예금   |1  |
-Sunday   |정기예금   |3  |
-Sunday   |가이드    |2  |
-Sunday   |내신용정보  |2  |
-Sunday   |세이프박스  |2  |
-Sunday   |이체내역   |2  |
-Sunday   |내정보    |1  |
-Sunday   |내카드    |1  |
-Sunday   |모임통장   |-  |
-Sunday   |추천     |-  |
-Sunday   |카드이용내역 |-  |
+DAY_NAME |RNK|MENU_NM|CNT|
+---------|---|-------|---|
+Monday   |  1|가이드    |9  |
+Monday   |  2|세이프박스  |8  |
+Monday   |  3|내신용정보  |6  |
+Monday   |  4|내카드    |6  |
+Monday   |  5|모임통장   |6  |
+Monday   |  6|추천     |6  |
+Monday   |  7|카드이용내역 |6  |
+Monday   |  8|내정보    |5  |
+Monday   |  9|이체내역   |5  |
+Monday   | 10|정기예금   |5  |
+Tuesday  |  1|이체내역   |22 |
+Tuesday  |  2|추천     |20 |
+Tuesday  |  3|내카드    |19 |
+Tuesday  |  4|세이프박스  |18 |
+Tuesday  |  5|가이드    |17 |
+Tuesday  |  6|내신용정보  |17 |
+Tuesday  |  7|정기예금   |17 |
+Tuesday  |  8|모임통장   |14 |
+Tuesday  |  9|카드이용내역 |13 |
+Tuesday  | 10|내정보    |11 |
+Wednesday|  1|세이프박스  |12 |
+Wednesday|  2|가이드    |10 |
+Wednesday|  3|추천     |10 |
+Wednesday|  4|정기예금   |9  |
+Wednesday|  5|내신용정보  |7  |
+Wednesday|  6|이체내역   |7  |
+Wednesday|  7|내정보    |4  |
+Wednesday|  8|내카드    |4  |
+Wednesday|  9|모임통장   |4  |
+Wednesday| 10|카드이용내역 |3  |
+Thursday |  1|이체내역   |5  |
+Thursday |  2|내카드    |4  |
+Thursday |  3|추천     |4  |
+Thursday |  4|내신용정보  |3  |
+Thursday |  5|세이프박스  |3  |
+Thursday |  6|정기예금   |1  |
+Thursday |  7|카드이용내역 |1  |
+Thursday |  8|-      |-  |
+Thursday |  9|-      |-  |
+Thursday | 10|-      |-  |
+Friday   |  1|추천     |5  |
+Friday   |  2|내정보    |4  |
+Friday   |  3|이체내역   |4  |
+Friday   |  4|내카드    |3  |
+Friday   |  5|모임통장   |3  |
+Friday   |  6|세이프박스  |3  |
+Friday   |  7|내신용정보  |2  |
+Friday   |  8|가이드    |1  |
+Friday   |  9|정기예금   |1  |
+Friday   | 10|카드이용내역 |1  |
+Saturday |  1|모임통장   |10 |
+Saturday |  2|가이드    |7  |
+Saturday |  3|내정보    |7  |
+Saturday |  4|세이프박스  |6  |
+Saturday |  5|이체내역   |5  |
+Saturday |  6|추천     |5  |
+Saturday |  7|카드이용내역 |5  |
+Saturday |  8|내카드    |4  |
+Saturday |  9|내신용정보  |2  |
+Saturday | 10|정기예금   |1  |
+Sunday   |  1|정기예금   |3  |
+Sunday   |  2|가이드    |2  |
+Sunday   |  3|내신용정보  |2  |
+Sunday   |  4|세이프박스  |2  |
+Sunday   |  5|이체내역   |2  |
+Sunday   |  6|내정보    |1  |
+Sunday   |  7|내카드    |1  |
+Sunday   |  8|-      |-  |
+Sunday   |  9|-      |-  |
+Sunday   | 10|-      |-  |
